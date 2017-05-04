@@ -14,6 +14,7 @@
 echo "
 <html>
 <head>
+	<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
 	<script src='js/applicationtodonate.js' type='text/javascript'></script>
 	<link href='css/applicationtodonate.css' type='text/css' rel='stylesheet'>
 </head>
@@ -32,7 +33,7 @@ echo "
 			Phone: $phone<br>
 		</div>
 		<p>Is this correct?</p>
-		<button type='button'>Yes</button>
+		<button type='button' id='yes'>Yes</button>
 		<button type='button' onclick='pleasechangeinfo()'>No, I want to try again</button>
 		<div id='changeinfo'>
 		</div>

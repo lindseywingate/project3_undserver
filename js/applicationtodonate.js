@@ -1,5 +1,11 @@
 /*This script moves stuff around on the app.php page*/
 
+$('#yes').on('click', function() {
+	
+
+
+});
+
 function pleasechangeinfo() {
 	var xmlhttp;	
 	if(window.XMLHttpRequest) {
