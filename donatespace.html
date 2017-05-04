@@ -11,14 +11,14 @@
 	<div id="page">
 		<div id="typeofspace">
 			<p>I am offering space...</p>
-			<form action="applicationtodonate.php">
+			<form action="applicationtodonate.php" method="post">
 				<input type="radio" name="type" value="hotel"> at a Hotel<br>
 				<input type="radio" name="type" value="homeowner"> at a  Home<br>
 			<p>What spaces can you offer?</p>
 				<input type="checkbox" name="rooms[]" value="bedroom" id="bedroom">Bedroom</br>
 				<div id="bedrooms">
 					<p>Bedrooms: 
-					<select id="numbedrooms">
+					<select id="numbedrooms" name="bedrooms">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -30,7 +30,7 @@
 			<input type="checkbox" name="rooms[]" value="masterbed" id="masterbed">Bedroom with attached bathroom</br>
 				<div id="masterbeds">
 				<p>Bedrooms: 
-					<select id="nummasterbedrooms">
+					<select id="nummasterbedrooms" name="nummasterbedrooms">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -39,7 +39,7 @@
 					</select>
 					</p>
 					<p>Bathrooms:
-					<select id="nummasterbathrooms">
+					<select id="nummasterbathrooms" name="nummasterbathrooms">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -52,7 +52,7 @@
 				<input type="checkbox" name="rooms[]" value="apartment" id="apartment">Entire Apartment</br>
 				<div id="aptrooms">
 					<p>Bedrooms: 
-					<select id="numaptbedrooms">
+					<select id="numaptbedrooms" name="numaptbedrooms">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -61,7 +61,7 @@
 					</select>
 					</p>
 					<p>Bathrooms:
-					<select id="numaptbathrooms">
+					<select id="numaptbathrooms" name="numaptbathrooms">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -73,7 +73,7 @@
 				<input type="checkbox" name="rooms[]" value="house" id="house">Entire House</br>
 				<div id="houserooms">
 					<p>Bedrooms: 
-					<select id="numhousebedrooms">
+					<select id="numhousebedrooms" name="numhousebedrooms">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -82,7 +82,7 @@
 					</select>
 					</p>
 					<p>Bathrooms:
-					<select id="numhousebathrooms">
+					<select id="numhousebathrooms" name="numhousebathrooms">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
