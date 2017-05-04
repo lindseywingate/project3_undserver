@@ -15,7 +15,7 @@
 				<input type="radio" name="type" value="hotel"> at a Hotel<br>
 				<input type="radio" name="type" value="homeowner"> at a  Home<br>
 			<p>What spaces can you offer?</p>
-				<input type="checkbox" name="bedroom" value="bedroom" id="bedroom">Bedroom</br>
+				<input type="checkbox" name="rooms[]" value="bedroom" id="bedroom">Bedroom</br>
 				<div id="bedrooms">
 					<p>Bedrooms: 
 					<select id="numbedrooms">
@@ -27,7 +27,7 @@
 					</select>
 					</p>
 				</div>
-			<input type="checkbox" name="masterbed" value="masterbed" id="masterbed">Bedroom with attached bathroom</br>
+			<input type="checkbox" name="rooms[]" value="masterbed" id="masterbed">Bedroom with attached bathroom</br>
 				<div id="masterbeds">
 				<p>Bedrooms: 
 					<select id="nummasterbedrooms">
@@ -49,7 +49,7 @@
 				</p>
 
 				</div>
-				<input type="checkbox" name="apartment" value="apartment" id="apartment">Entire Apartment</br>
+				<input type="checkbox" name="rooms[]" value="apartment" id="apartment">Entire Apartment</br>
 				<div id="aptrooms">
 					<p>Bedrooms: 
 					<select id="numaptbedrooms">
@@ -70,7 +70,7 @@
 					</select>
 					</p>
 				</div>
-				<input type="checkbox" name="house" value="house" id="house">Entire House</br>
+				<input type="checkbox" name="rooms[]" value="house" id="house">Entire House</br>
 				<div id="houserooms">
 					<p>Bedrooms: 
 					<select id="numhousebedrooms">
