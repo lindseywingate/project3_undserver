@@ -1,0 +1,23 @@
+<!--This is the home page that everyone sees once they are logged in-->
+
+<html>
+<head>
+	<link href="css/home.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+</head>
+<body>
+	<div id="text_stuff">
+		<h1>Welcome</h1>
+		<p>I am looking...</p>
+		<form action="service.php" method='POST'>
+			<input type="radio" name="redirect" value="map.html">for a place to stay</br>
+			<input type="radio" name="redirect" value="donatespace.html" onClick="putgivetext()">to donate a space</br>
+			<div id="explanation_insert">
+			</div>
+			<input type="submit" name="act" id="submitbutton" value="Submit" />
+		</form>
+	</div>
+</body>
+</html>
+

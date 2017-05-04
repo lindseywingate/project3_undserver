@@ -1,0 +1,46 @@
+/*This page contains the styles of the donatespace html page*/
+@font-face {
+	font-family: daniel;
+	src: url("Daniel-Bold.otf");
+}
+
+body {
+	background-color: black;
+	font-family: daniel;
+}
+
+h1 {
+	font-family: daniel;
+	text-align: center;
+	font-size: 50px;	
+	color: white;
+}
+
+#typeofspace {
+	padding: 20px;
+	font-family: daniel;
+	font-size: 15px;	
+	color: rgb(0, 137, 123);
+	border: 2px solid white;
+	-webkit-border-radius: 10px;
+	vertical-align: middle;
+	position: absolute;
+	box-sizing: border-box;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: 100px;
+}
+
+input[type=file] {
+	font-family: daniel;
+	font-size: 15px;
+}
+
+input[type=submit] {
+    font-family: daniel;
+    color: rgb(0, 137, 123);
+    text-align: right !important;
+    border: 2px solid #80CBC4;
+    background: rgba(0, 0, 0, 0.0);
+	font-size: 15px;
+}
