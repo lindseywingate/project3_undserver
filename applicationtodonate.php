@@ -21,17 +21,19 @@ echo "
 <body>
 	<h1>Confirmation</h1>
 	<div id='text_stuff'>
+		<div id='replaceme'>
 		<p>You applied with the following information: <br><br>
-		$singlebedrooms Single bedroom(s) <br><br>
-		$masterbedrooms Bedrooms with bathrooms connected <br><br>
-		$numapts apartment(s) with $aptbedrooms bedroom(s) and $aptbathrooms bathroom(s) <br><br>
-		$numhouses house(s) with $housebedrooms bedroom(s) and $housebathrooms bathroom(s) <br><br>
-		Name: $name<br>
-		Email: $email<br>
-		Phone: $phone<br>
+			$singlebedrooms Single bedroom(s) <br><br>
+			$masterbedrooms Bedrooms with bathrooms connected <br><br>
+			$numapts apartment(s) with $aptbedrooms bedroom(s) and $aptbathrooms bathroom(s) <br><br>
+			$numhouses house(s) with $housebedrooms bedroom(s) and $housebathrooms bathroom(s) <br><br>
+			Name: $name<br>
+			Email: $email<br>
+			Phone: $phone<br>
+		</div>
 		<p>Is this correct?</p>
 		<button type='button'>Yes</button>
-		<button type='button' onclick='pleasechangeinfo()'>No</button>
+		<button type='button' onclick='pleasechangeinfo()'>No, I want to try again</button>
 		<div id='changeinfo'>
 		</div>
 	</div>
