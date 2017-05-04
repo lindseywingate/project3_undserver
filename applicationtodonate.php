@@ -1,20 +1,42 @@
 <?php
-
+	$singlebedrooms = $_POST['bedrooms'];
+	$masterbedrooms = $_POST['nummasterbedrooms'];
+	$aptbedrooms =  $_POST['numaptbedrooms'];
+	$aptbathrooms =  $_POST['numaptbathrooms'];
+	$housebedrooms =  $_POST['numhousebedrooms'];
+	$housebathrooms = $_POST['numhousebathrooms'];
+	$numapts = $_POST['numapts'];
+	$numhouses = $_POST['numhouses'];
+	$name = $_POST['name'];
+	$email =  $_POST['email'];
+	$phone =  $_POST['phonenum'];
 //This php file records information people register on the website and adds it to the application database
+echo "
+<html>
+<head>
+	<script src='js/applicationtodonate.js' type='text/javascript'></script>
+	<link href='css/applicationtodonate.css' type='text/css' rel='stylesheet'>
+</head>
 
-if(isset($_POST['rooms'])) {
-	$rooms = $_POST['rooms'];
-	for($i=0; $i<count($rooms); $i++) {
-		echo $rooms[$i]."<br />";
-	}
-	echo $_POST['bedrooms'];
-	echo $_POST['nummasterbedrooms'];
-	echo $_POST['nummasterbathrooms'];
-	echo $_POST['numaptbedrooms'];
-	echo $_POST['numaptbathrooms'];
-	echo $_POST['numhousebedrooms'];
-	echo $_POST['numhousebathrooms'];
-}
-
+<body>
+	<h1>Confirmation</h1>
+	<div id='text_stuff'>
+		<p>You applied with the following information: <br><br>
+		$singlebedrooms Single bedroom(s) <br><br>
+		$masterbedrooms Bedrooms with bathrooms connected <br><br>
+		$numapts apartment(s) with $aptbedrooms bedroom(s) and $aptbathrooms bathroom(s) <br><br>
+		$numhouses house(s) with $housebedrooms bedroom(s) and $housebathrooms bathroom(s) <br><br>
+		Name: $name<br>
+		Email: $email<br>
+		Phone: $phone<br>
+		<p>Is this correct?</p>
+		<button type='button'>Yes</button>
+		<button type='button' onclick='pleasechangeinfo()'>No</button>
+		<div id='changeinfo'>
+		</div>
+	</div>
+</body>
+</html>
+";
 
 ?>
