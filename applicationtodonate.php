@@ -38,6 +38,7 @@ echo "
 		<div id='changeinfo'>
 		</div>
 	</div>
+
 </body>
 </html>
 ";
