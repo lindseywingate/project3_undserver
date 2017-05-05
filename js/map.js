@@ -2,6 +2,33 @@
 var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
 var home = 'http://www.iconhot.com/icon/png/token-dark/48/home-92.png';
 
+function groupsearch() {
+	var xhttp;
+	if(window.XMLHttpRequest) {
+		xhttp = new XMLHttpRequest();
+	} 
+	else {
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	//xhttp.open('GET', 'getcities.php', true);
+	xhttp.onreadystatechange = function() {
+		if(xhttp.status===200) {
+			console.log(xhttp.responseText);		
+		}
+		else {
+			console.log('Error: '+xhttp.status);
+		}
+	};
+	xhttp.open('get', 'getcities.php', true);
+	xhttp.send();
+}
+
+function streetsearch() {
+
+
+}
+
+
 function getlocation() {
 	if(navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(initialize, showError);
@@ -70,7 +97,4 @@ $(function() {
 	});
 });
 
-function newsearch() {
 
-
-}

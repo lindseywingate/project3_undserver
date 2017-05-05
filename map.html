@@ -15,13 +15,13 @@
 	<div id="criteria">
 		<h2>Search Options</h2>
 		<div class="ui-widget">
-			<label for='tags'>Street</label>
-			<input id='tags'>
+			<label for='tags'>Street:<input id='tags'></label>
 		</div>	
 		<p id="sidenote">*This search automatically shows all available housing, regardless of other search criteria.</p>
-		<button type="button" onclick="newsearch()">Go</button>
+		<input type="submit" name='streetsearch' value='go' onClick='streetsearch()'>
 		<hr>
-		<p>Group: <select id="groupsize">
+		<p>Group: 
+		<select id="groupsize">
 			<option value="single">single</option>
 			<option value="couple">couple</option>
 			<option value="family">family</option>
@@ -33,7 +33,7 @@
 		    <option value="no">No</option>
 		</select>
 		</p>
-		<button type="button" onclick="newsearch()">Go</button>
+		<input type="submit" name='groupsearch' value='go' onClick='groupsearch()'>
 	</div>
 	<div id="description">
 		<p>When the map loads, click on the available home icons to see a description.</p>

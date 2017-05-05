@@ -39,7 +39,7 @@ p {
 	z-index; 1;
 }
 
-label {
+label, #tags {
 	font-family: daniel;
 }
 
@@ -67,7 +67,7 @@ label {
 	float: right;
 }
 
-button {
+input[type=submit] {
 	font-family: daniel;
 	color: white;
 	text-align: right !important;
