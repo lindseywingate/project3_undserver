@@ -34,3 +34,13 @@ function initialize(position) {
 	});
 }
 
+$(function() {
+	var availableTags = [
+		"test",
+		"test2",
+		"test3"
+	];
+	$('#tags').autocomplete({
+		source: availableTags
+	});
+});
