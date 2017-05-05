@@ -69,3 +69,8 @@ $(function() {
 		source: availableTags
 	});
 });
+
+function newsearch() {
+
+
+}

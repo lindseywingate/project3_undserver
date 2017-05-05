@@ -39,6 +39,10 @@ p {
 	z-index; 1;
 }
 
+label {
+	font-family: daniel;
+}
+
 #criteria {
 	width: 30%;
 	height: 50%;
