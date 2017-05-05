@@ -1,5 +1,5 @@
 /*This is the js file for the index.html page*/
-//var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
+var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
 var home = 'http://www.iconhot.com/icon/png/token-dark/48/home-92.png';
 
 function localsearch() {
@@ -42,7 +42,7 @@ function setlocation(coords) {
 	var userMarker = new google.maps.Marker({
 		position: position,
 		map: map,
-		icon: home,	
+		icon: im,	
 		title: "You are here!"
 	});
 }
@@ -77,6 +77,9 @@ function initialize(position) {
 		icon: home,	
 		title: "You are here!"
 	});
+	userMarker.addListener('click', function () {
+		document.getElementById("description").innerHTML = "This is your current location.";		
+	});	
 }
 
 $(function() {
