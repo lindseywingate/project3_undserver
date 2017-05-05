@@ -2,7 +2,7 @@
 //var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
 var home = 'http://www.iconhot.com/icon/png/token-dark/48/home-92.png';
 
-function streetsearch() {
+function localsearch() {
 	var xhttp;
 	var streetsearch = new FormData(document.getElementById("tags"));
 	if(window.XMLHttpRequest) {
@@ -12,13 +12,14 @@ function streetsearch() {
 		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 
-	xhttp.open('get', 'getstreet.php', true);
+	xhttp.open('get', 'getsearch.php', true);
 	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xhttp.send(streetsearch);
 
 	xhttp.onreadystatechange = function() {
 		if(xhttp.status===200) {
-			console.log(xhttp.responseText);		
+			console.log(xhttp.responseText);	
+			setlocation($xhttp.responseText);	
 		}
 		else {
 			console.log('Error: '+xhttp.status);
@@ -26,6 +27,25 @@ function streetsearch() {
 	};
 }
 
+/*This function resets the map view based on the user input*/
+function setlocation(coords) {
+	//split coords to variables
+	var lat = position.coords.latitude;
+	var lon = position.coords.longitude;
+	var position = new google.maps.LatLng(lat, lon);
+	var mapOptions = {
+		zoom: 16,
+		center: position,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+	}
+	var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+	var userMarker = new google.maps.Marker({
+		position: position,
+		map: map,
+		icon: home,	
+		title: "You are here!"
+	});
+}
 
 function getlocation() {
 	if(navigator.geolocation) {
@@ -61,34 +81,13 @@ function initialize(position) {
 
 $(function() {
 	var availableTags = [
-		"Gateway Drive",
-		"Sixth Avenue North",
-		"University Avenue",
-		"Demers Avenue",
-		"13th Avenue South",
-		"17th Avenue South",
-		"24th Avenue South",
-		"32nd Avenue South",
-		"40th Avenue South",
-		"47th Avenue South",
-		"5th Street",
-		"Belmond Road",
-		"Cherry Street",
-		"Washinton Street",
-		"Columbia Road",
-		"42nd Street",
-		"South 48th Street",
-		"North 55th Street",
-		"First Avenue North",
-		"Second Avenue North",
-		"University Avenue",
-		"Fourth Avenue North",
-		"Fifth Avenue North",
-		"Sixth Avenue North",
-		"Seventh Avenue North",
-		"Eighth Avenue North",
-		"Ninth Avenue North",
-		"Gateway Drive"
+		"Ralph Engelstad Arena",
+		"University Park",
+		"Lake Agassiz Park",
+		"Home of Economy",
+		"Chester Fritz Auditorium",
+		"Alerus Center",
+		"Valley Golf Course"		
 	];
 	$('#tags').autocomplete({
 		source: availableTags
