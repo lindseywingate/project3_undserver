@@ -1,16 +1,21 @@
 /*This is the js file for the index.html page*/
-var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
+//var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
 var home = 'http://www.iconhot.com/icon/png/token-dark/48/home-92.png';
 
-function groupsearch() {
+function streetsearch() {
 	var xhttp;
+	var streetsearch = new FormData(document.getElementById("tags"));
 	if(window.XMLHttpRequest) {
 		xhttp = new XMLHttpRequest();
 	} 
 	else {
 		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 	}
-	//xhttp.open('GET', 'getcities.php', true);
+
+	xhttp.open('get', 'getstreet.php', true);
+	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	xhttp.send(streetsearch);
+
 	xhttp.onreadystatechange = function() {
 		if(xhttp.status===200) {
 			console.log(xhttp.responseText);		
@@ -19,13 +24,6 @@ function groupsearch() {
 			console.log('Error: '+xhttp.status);
 		}
 	};
-	xhttp.open('get', 'getcities.php', true);
-	xhttp.send();
-}
-
-function streetsearch() {
-
-
 }
 
 
