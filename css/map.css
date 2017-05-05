@@ -63,4 +63,15 @@ p {
 	float: right;
 }
 
-
+button {
+	font-family: daniel;
+	color: white;
+	text-align: right !important;
+	font-size: 20px;
+	border: 2px solid #80CBC4;
+	-webkit-border-radius: 5px;
+	background: rgba(0, 0, 0, 0.0);
+}
+#sidenote {
+	font-size: 10px;
+}

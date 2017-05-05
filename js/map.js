@@ -36,9 +36,34 @@ function initialize(position) {
 
 $(function() {
 	var availableTags = [
-		"test",
-		"test2",
-		"test3"
+		"Gateway Drive",
+		"Sixth Avenue North",
+		"University Avenue",
+		"Demers Avenue",
+		"13th Avenue South",
+		"17th Avenue South",
+		"24th Avenue South",
+		"32nd Avenue South",
+		"40th Avenue South",
+		"47th Avenue South",
+		"5th Street",
+		"Belmond Road",
+		"Cherry Street",
+		"Washinton Street",
+		"Columbia Road",
+		"42nd Street",
+		"South 48th Street",
+		"North 55th Street",
+		"First Avenue North",
+		"Second Avenue North",
+		"University Avenue",
+		"Fourth Avenue North",
+		"Fifth Avenue North",
+		"Sixth Avenue North",
+		"Seventh Avenue North",
+		"Eighth Avenue North",
+		"Ninth Avenue North",
+		"Gateway Drive"
 	];
 	$('#tags').autocomplete({
 		source: availableTags
