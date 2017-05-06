@@ -42,7 +42,7 @@ function setlocation(coords) {
 	var userMarker = new google.maps.Marker({
 		position: position,
 		map: map,
-		icon: im,	
+		icon: "../css/location_icon.png",
 		title: "You are here!"
 	});
 }
@@ -74,7 +74,7 @@ function initialize(position) {
 	var userMarker = new google.maps.Marker({
 		position: position,
 		map: map,
-		icon: home,	
+		icon: "http://maps.google.com/mapfiles/kml/pal4/icon57.png",	
 		title: "You are here!"
 	});
 	userMarker.addListener('click', function () {
