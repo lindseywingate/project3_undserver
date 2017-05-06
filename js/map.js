@@ -80,6 +80,55 @@ function initialize(position) {
 	userlocation.addListener('click', function () {
 		document.getElementById("description").innerHTML = "This is your current location.";		
 	});	
+
+	var space = new google.maps.Marker({
+		position: {lat: 47.904314, lng: -97.037523},
+		map: map,	
+		icon: home
+	});
+	space.addListener('click', function () {
+		document.getElementById("description").innerHTML = "<p>Enough space for 2 people. One bedroom (queen bed), one bathroom.</p>";
+	});
+	var space2 = new google.maps.Marker({
+		position: {lat: 47.911372, lng: -97.035377},
+		map: map,
+		icon: home
+	});
+	space2.addListener('click', function() {
+		document.getElementById("description").innerHTML = "<p>House. Enough space for 4 people. Two bedrooms (one with a queen bed, one with two single beds), one bathroom.</p>";
+	});
+	var space3 = new google.maps.Marker({
+		position: {lat: 47.926043, lng: -97.047508},
+		map: map,
+		icon: home
+	});
+	space3.addListener('click', function() {
+		document.getElementById("description").innerHTML = "<p>House. Enough space for 6 people. Three bedrooms (one with a queen bed, two with two single beds), two bathrooms.</p>";
+	});
+	var space4 = new google.maps.Marker({
+		position: {lat: 47.869421, lng: -97.034320},
+		map: map,
+		icon: home
+	});
+	space4.addListener('click', function() {
+		document.getElementById("description").innerHTML = "<p>Apartment. Enough space for 1 person. One bedroom with single bed, shared bathroom with owners.</p>";
+	});
+	var space5 = new google.maps.Marker({
+		position: {lat: 47.922700, lng: -97.064489},
+		map: map,
+		icon: home
+	});
+	space5.addListener('click', function() {
+		document.getElementById("description").innerHTML = "<p>Apartment. Enough room for three people. Two bedrooms (one with a king bed, one with a single bed), one bathroom.</p>";
+	});
+	var space6 = new google.maps.Marker({
+		position: {lat: 47.88654, lng: -97.037904},
+		map: map,
+		icon: home
+	});
+	space6.addListener('click', function() {
+		document.getElementById("description").innerHTML = "<p>House. Enough room for 10 people. Five bedrooms (each with two single beds), 2 bathrooms.</p>";
+	});
 }
 
 $(function() {
