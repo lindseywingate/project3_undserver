@@ -39,5 +39,26 @@ label, #tags {
 	font-family: daniel;
 }
 
-/*color: #80CBC4;
-background-color: rgba(0, 137, 123, 0.8);
+#text_stuff {
+	text-align: center;
+    vertical-align: middle;
+    color: #80CBC4;
+    background-color: rgba(0, 137, 123, 0.8);
+    border: 2px solid rgb(0, 137, 123);
+    -webkit-border-radius: 10px;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 100px;
+}
+
+button {
+    font-family: daniel;
+    color: #80CBC4;
+    font-size: 20px;
+    border: 2px solid #80CBC4;
+    -webkit-border-radius: 5px;
+    background: rgba(0, 0, 0, 0.0);
+}
