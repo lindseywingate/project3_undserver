@@ -1,0 +1,43 @@
+/*This is the css for the map.html page*/
+@font-face {
+    font-family: daniel;
+    src: url(Daniel-Bold.otf);
+}
+
+html {
+    font-family: daniel; /*I want to actually use Daniel-Bold.otf on the server*/
+}
+
+body {
+    background-color: black;
+	color: white;
+}
+
+h1 {
+	font-family: daniel;
+    font-size: 50px;
+    text-align: center;
+	color: white;
+}
+
+h2 {
+	text-decoration: underline;
+}
+
+p {
+	font-size: 20px;
+}
+
+#map_canvas {
+	width: 60%;
+	height: 600px;
+	float: left;
+	z-index; 1;
+}
+
+label, #tags {
+	font-family: daniel;
+}
+
+/*color: #80CBC4;
+background-color: rgba(0, 137, 123, 0.8);

@@ -19,7 +19,8 @@ function localsearch() {
 	xhttp.onreadystatechange = function() {
 		if(xhttp.status===200) {
 			console.log(xhttp.responseText);	
-			setlocation($xhttp.responseText);	
+			//need to clean response and use to set location
+			//setlocation($xhttp.responseText);	
 		}
 		else {
 			console.log('Error: '+xhttp.status);
@@ -42,8 +43,7 @@ function setlocation(coords) {
 	var userMarker = new google.maps.Marker({
 		position: position,
 		map: map,
-		icon: "../css/location_icon.png",
-		title: "You are here!"
+		icon: "http://maps.google.com/mapfiles/kml/pal2/icon10.png"
 	});
 }
 
@@ -71,13 +71,13 @@ function initialize(position) {
 	}
 
 	var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-	var userMarker = new google.maps.Marker({
+	var userlocation = new google.maps.Marker({
 		position: position,
 		map: map,
 		icon: "http://maps.google.com/mapfiles/kml/pal4/icon57.png",	
 		title: "You are here!"
 	});
-	userMarker.addListener('click', function () {
+	userlocation.addListener('click', function () {
 		document.getElementById("description").innerHTML = "This is your current location.";		
 	});	
 }

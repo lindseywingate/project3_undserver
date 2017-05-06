@@ -67,6 +67,27 @@ label, #tags {
 	float: right;
 }
 
+#book {
+	width: 30%;
+	height: 40%;
+	color: #80CBC4;
+	background-color: rgba(0, 137, 123, 0.8);
+    border: 2px solid rgb(0, 137, 123);
+    -webkit-border-radius: 10px;
+	padding: 20px;
+	right: 20px;
+	float: right;
+}
+
+#small {
+	font-size: 10px;
+}
+
+#bookform {
+	font-family: daniel;
+
+}
+
 input[type=submit] {
 	font-family: daniel;
 	color: white;

@@ -15,9 +15,9 @@
 	<div id="criteria">
 		<h2>Search Options</h2>
 		<div class="ui-widget">
-			<label for='tags'>Local Landmarks:<input id='tags' name='tags'></label>
+			<label for='tags'>Local Landmarks:<input id="tags" name="tags"></label>
 		</div>	
-		<input type="submit" name='localsearch' value='go' onClick='localsearch()'>
+		<input type="submit" name="localsearch" value="go" onClick='localsearch()'>
 <!--	<hr>
 		<p>Group: 
 		<select id="groupsize">
@@ -37,6 +37,12 @@
 	<div id="description">
 		<p>When the map loads, click on the available home icons to see a description.</p>
 	</div>
+	<div id="book">
+		<p>When do you need the space?</p>
+		<form>
+			<p id="small">From <input type="date" name="from" id="bookform"></p>
+			<p id="small">To <input type="date" name="to" id="bookform"></p>
+		</form>
+	</div>	
 </body>
 </html>
-
