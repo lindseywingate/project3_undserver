@@ -2,56 +2,41 @@
 var home = "http://www.iconhot.com/icon/png/token-dark/48/home-92.png";
 
 $(document).ready(function() {
-	$("#localsearch").click(function() {
+/*	$("#localsearch").click(function() {
+		var place = ($("#tags").val());
 		var data = {
-			"action": $("#tags").val()
+			place:place
 		}
 		$.ajax({
 			type: "POST",
 			url: "getsearch.php",
-			dataType: "json",
 			data: data,
 			success: function(response) {
-			
+				var results = response;
+				console.log(results);
+				setlocation(results);
+			},
+			error: function(xhr, status, error) {
+				console.log(error);
 			}
 		});	
 
-
-	/*	var xhttp;
-		console.log(document.getElementById("tags"));
-		var streetsearch = (document.getElementById("tags").value);
-		console.log(streetsearch);
-		if(window.XMLHttpRequest) {
-			xhttp = new XMLHttpRequest();
-		} 
-		else {
-			xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-		}
-
-		xhttp.onreadystatechange = function() {
-			if(this.readyState==4) {
-				if(this.status == 200) {
-					var response = this.responseText;
-					console.log(response);
-			//need to clean response and use to set location
-			//setlocation($xhttp.responseText);	
-				}
-			}
-			else {
-				console.log("Error: "+xhttp.status);
-			}
-		};
-		xhttp.open("get", "getsearch.php", true);
-		xhttp.send(streetsearch);
-*/
 	});
 });
+*/
+	$("#localsearch").click(function () {
+		console.log("this is a test");
+		setlocation("47.927566-97.071379");		
+
+	});
 
 /*This function resets the map view based on the user input*/
 function setlocation(coords) {
 	//split coords to variables
-	var lat = position.coords.latitude;
-	var lon = position.coords.longitude;
+	var res = coords.split("=");
+	console.log(res);	
+	var lat = res[0]; 
+	var lon = res[1];
 	var position = new google.maps.LatLng(lat, lon);
 	var mapOptions = {
 		zoom: 16,
