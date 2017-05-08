@@ -1,10 +1,8 @@
 /*This script moves stuff around on the app.php page*/
 
-$('#yes').on('click', function() {
-	
-
-
-});
+function enter() {
+	window.location.href=("http://people.aero.und.edu/~lwingate/457/3/sendspace.html");	
+}
 
 function pleasechangeinfo() {
 	var xmlhttp;	

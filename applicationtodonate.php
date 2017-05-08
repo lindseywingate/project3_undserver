@@ -33,7 +33,7 @@ echo "
 			Phone: $phone<br>
 		</div>
 		<p>Is this correct?</p>
-		<button type='button' id='yes'>Yes</button>
+		<button type='button' onclick='enter()'>Yes</button>
 		<button type='button' onclick='pleasechangeinfo()'>No, I want to try again</button>
 		<div id='changeinfo'>
 		</div>

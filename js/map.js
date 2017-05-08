@@ -20,8 +20,11 @@ $(document).ready(function() {
 				console.log(error);
 			}
 		});	
-
 	});
+	$("#GO").on("click", function () {	
+		window.location.href=("http://people.aero.und.edu/~lwingate/457/3/bookspace.html");
+	});
+
 });
 
 /*This function resets the map view based on the user input*/
