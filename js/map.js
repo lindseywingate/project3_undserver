@@ -2,7 +2,7 @@
 var home = "http://www.iconhot.com/icon/png/token-dark/48/home-92.png";
 
 $(document).ready(function() {
-/*	$("#localsearch").click(function() {
+	$("#localsearch").click(function() {
 		var place = ($("#tags").val());
 		var data = {
 			place:place
@@ -23,12 +23,6 @@ $(document).ready(function() {
 
 	});
 });
-*/
-	$("#localsearch").click(function () {
-		console.log("this is a test");
-		setlocation("47.927566-97.071379");		
-
-	});
 
 /*This function resets the map view based on the user input*/
 function setlocation(coords) {
