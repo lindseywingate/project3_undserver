@@ -27,7 +27,7 @@ $(document).ready(function() {
 /*This function resets the map view based on the user input*/
 function setlocation(coords) {
 	//split coords to variables
-	var res = coords.split("=");
+	var res = coords.split("-");
 	console.log(res);	
 	var lat = res[0]; 
 	var lon = res[1];
