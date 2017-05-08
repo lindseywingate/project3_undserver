@@ -1,5 +1,5 @@
 <?php
-$data = $_POST["localsearch"];
+$data = "Lake Agassiz Park";
 
 $username = "lindseywingate";
 $password = "password";
@@ -8,7 +8,7 @@ $conn = mysql_connect($host, $username, $password);
 
 if($conn) {
 	mysql_select_db("lindseywingate, $conn");
-	query = "SELECT coords from places WHERE name = '$data'";
+	$query = "SELECT coords from places WHERE name = '$data'";
 	$result = mysql_query($query, $conn);
 	$num = mysql_numrows($result);
 	if($num) {
