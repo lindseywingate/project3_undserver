@@ -1,31 +1,51 @@
 /*This is the js file for the index.html page*/
-var home = 'http://www.iconhot.com/icon/png/token-dark/48/home-92.png';
+var home = "http://www.iconhot.com/icon/png/token-dark/48/home-92.png";
 
-function localsearch() {
-	var xhttp;
-	var streetsearch = new FormData(document.getElementById("tags"));
-	if(window.XMLHttpRequest) {
-		xhttp = new XMLHttpRequest();
-	} 
-	else {
-		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-	}
+$(document).ready(function() {
+	$("#localsearch").click(function() {
+		var data = {
+			"action": $("#tags").val()
+		}
+		$.ajax({
+			type: "POST",
+			url: "getsearch.php",
+			dataType: "json",
+			data: data,
+			success: function(response) {
+			
+			}
+		});	
 
-	xhttp.open('get', 'getsearch.php', true);
-	xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	xhttp.send(streetsearch);
 
-	xhttp.onreadystatechange = function() {
-		if(xhttp.status===200) {
-			console.log(xhttp.responseText);	
+	/*	var xhttp;
+		console.log(document.getElementById("tags"));
+		var streetsearch = (document.getElementById("tags").value);
+		console.log(streetsearch);
+		if(window.XMLHttpRequest) {
+			xhttp = new XMLHttpRequest();
+		} 
+		else {
+			xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		xhttp.onreadystatechange = function() {
+			if(this.readyState==4) {
+				if(this.status == 200) {
+					var response = this.responseText;
+					console.log(response);
 			//need to clean response and use to set location
 			//setlocation($xhttp.responseText);	
-		}
-		else {
-			console.log('Error: '+xhttp.status);
-		}
-	};
-}
+				}
+			}
+			else {
+				console.log("Error: "+xhttp.status);
+			}
+		};
+		xhttp.open("get", "getsearch.php", true);
+		xhttp.send(streetsearch);
+*/
+	});
+});
 
 /*This function resets the map view based on the user input*/
 function setlocation(coords) {
@@ -38,7 +58,7 @@ function setlocation(coords) {
 		center: position,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 	}
-	var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+	var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 	var userMarker = new google.maps.Marker({
 		position: position,
 		map: map,
@@ -69,14 +89,14 @@ function initialize(position) {
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 	}
 
-	var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+	var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 	var userlocation = new google.maps.Marker({
 		position: position,
 		map: map,
 		icon: "http://maps.google.com/mapfiles/kml/pal4/icon57.png",	
 		title: "You are here!"
 	});
-	userlocation.addListener('click', function () {
+	userlocation.addListener("click", function () {
 		document.getElementById("description").innerHTML = "This is your current location.";		
 	});	
 
@@ -85,7 +105,7 @@ function initialize(position) {
 		map: map,	
 		icon: home
 	});
-	space.addListener('click', function () {
+	space.addListener("click", function () {
 		document.getElementById("description").innerHTML = "<p>Enough space for 2 people. One bedroom (queen bed), one bathroom.</p>";
 	});
 	var space2 = new google.maps.Marker({
@@ -93,7 +113,7 @@ function initialize(position) {
 		map: map,
 		icon: home
 	});
-	space2.addListener('click', function() {
+	space2.addListener("click", function() {
 		document.getElementById("description").innerHTML = "<p>House. Enough space for 4 people. Two bedrooms (one with a queen bed, one with two single beds), one bathroom.</p>";
 	});
 	var space3 = new google.maps.Marker({
@@ -101,7 +121,7 @@ function initialize(position) {
 		map: map,
 		icon: home
 	});
-	space3.addListener('click', function() {
+	space3.addListener("click", function() {
 		document.getElementById("description").innerHTML = "<p>House. Enough space for 6 people. Three bedrooms (one with a queen bed, two with two single beds), two bathrooms.</p>";
 	});
 	var space4 = new google.maps.Marker({
@@ -109,7 +129,7 @@ function initialize(position) {
 		map: map,
 		icon: home
 	});
-	space4.addListener('click', function() {
+	space4.addListener("click", function() {
 		document.getElementById("description").innerHTML = "<p>Apartment. Enough space for 1 person. One bedroom with single bed, shared bathroom with owners.</p>";
 	});
 	var space5 = new google.maps.Marker({
@@ -117,7 +137,7 @@ function initialize(position) {
 		map: map,
 		icon: home
 	});
-	space5.addListener('click', function() {
+	space5.addListener("click", function() {
 		document.getElementById("description").innerHTML = "<p>Apartment. Enough room for three people. Two bedrooms (one with a king bed, one with a single bed), one bathroom.</p>";
 	});
 	var space6 = new google.maps.Marker({
@@ -125,7 +145,7 @@ function initialize(position) {
 		map: map,
 		icon: home
 	});
-	space6.addListener('click', function() {
+	space6.addListener("click", function() {
 		document.getElementById("description").innerHTML = "<p>House. Enough room for 10 people. Five bedrooms (each with two single beds), 2 bathrooms.</p>";
 	});
 }
@@ -140,7 +160,7 @@ $(function() {
 		"Alerus Center",
 		"Valley Golf Course"		
 	];
-	$('#tags').autocomplete({
+	$("#tags").autocomplete({
 		source: availableTags
 	});
 });
