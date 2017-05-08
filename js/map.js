@@ -1,5 +1,4 @@
 /*This is the js file for the index.html page*/
-var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
 var home = 'http://www.iconhot.com/icon/png/token-dark/48/home-92.png';
 
 function localsearch() {
